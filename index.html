@@ -1,0 +1,52 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Facundo Quintas Musician in Dublin, Ireland">
+    <meta name="keywords" content="Facundo Quintas,musican, dublin, Ireland">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <title>Document</title>
+  </head>
+  
+  <body>
+
+<div class="img">
+  <div class="square">
+  <!--Spaces for letters-->
+  <div id="main-div"></div>
+  <!--alphabet-->
+ <div id="button"></div>
+ <span class="lives"></span>
+ <button data-type="reset" class="reset">Reset</button>
+ </div>
+</div>
+
+<!--modal winner-->
+<div class="winner">
+  <div class="win">
+    <h2>You won!</h2>
+    <button class="winner-modal" data-type="win">Play again!</button>
+  </div>
+
+</div>
+
+  <div class="modal-Initiator">
+    <div class="modalIn">
+    <p>Hangman is a  word game in which one player has to guess a word that the other player has thought of,
+       by guessing the letters in it. In this case you will play with a computer
+       Every time you guess a wrong letter, you will loose a lives each time. If you guess the word before end the 3 lives you have, you will win!</p>
+       <h2>Choose a category!</h2>
+    <button class="game-category" data-type="animals">Animals</button>
+    <button class="game-category" data-type="cinema">Cinema</button>
+    <button class="game-category"  data-type="sports">Sports</button>
+    </div> 
+  </div>
+<div class="modal-bg">
+  <div class="modal">
+  <h2>Game over!</h2>
+  <button class="modal-close">Play</button>
+  </div>
+</div>
+
+  <script src="assets/js/script.js"></script>
+  </body>
