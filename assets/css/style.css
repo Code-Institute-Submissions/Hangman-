@@ -269,102 +269,100 @@ margin-top:150px;
       cursor:pointer
 
 }
-}
-
 @media (max-width:1200px){
-    .modalIn{
-        width: 65%;
-       height: auto;
-    }
+     .modalIn{
+         width: 65%;
+        height: auto;
+     }
 
-    .square{
-        width: 85%;
-    }
+     .square{
+         width: 85%;
+     }
 
 }
 
 @media (max-width:850px){
-    .modalIn{
-        width: 80%;
+     .modalIn{
+         width: 80%;
+         
+     }
+     .modalIn p{
         
-    }
-    .modalIn p{
-       
-        font-size: 1.4em;
-    }
+         font-size: 1.4em;
+     }
 
-    .square{
-        width:90%
-    }
+     .square{
+         width:90%
+     }
 
 
-    .alphabet{
-        margin:5px;
-    }
+     .alphabet{
+         margin:5px;
+     }
 
-    #main-div{
-        width: auto;
-    }
+     #main-div{
+         width: auto;
+     }
 
-    .win-modal{
-        width: 70%;
-    }
-    .modal{
-        width: 70%;
-    }
+     .win-modal{
+         width: 70%;
+     }
+     .modal{
+         width: 70%;
+     }
 }
 
 @media(max-width:450px){
 #main-div{
-   margin-top: 150px;
+    margin-top: 150px;
 }
 
 
 .alphabet{
-   width: 30px;
-   height: 30px;
-   font-size: 0.9em;
+    width: 30px;
+    height: 30px;
+    font-size: 0.9em;
 }
 .modalIn{
-   width:95%;
+    width:95%;
 }
 
 .buttonCategory{
-   margin-top:10px;
+    margin-top:10px;
 }
 .square{
-   width: 95%;
+    width: 95%;
 }
 
 .modalIn h2{
-   font-size: 1.4em;
-   padding-top:5px;
+    font-size: 1.4em;
+    padding-top:5px;
 }
 .buttonCategory{
-   margin:10px;
+    margin:10px;
 }
 .span{
-   font-size: 1.3em;
+    font-size: 1.3em;
 }
 
 .win-modal{
-   height: 50%;
+    height: 50%;
 }
 .modal{
-   height: 50%;
+    height: 50%;
 }
 #reset{
-   font-size: 1.2em
+    font-size: 1.2em
 }
 }
 @media(max-width:280px){
-   #main-div{
-       margin-top: 100px;
-   }
+    #main-div{
+        margin-top: 100px;
+    }
 
-  
    
-   .span{
-       font-size: 1.2em;
-   }
+    
+    .span{
+        font-size: 1.2em;
+    }
 }
