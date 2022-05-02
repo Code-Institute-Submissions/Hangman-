@@ -8,6 +8,17 @@ let square = document.querySelector(".square");
 
 let winModal = document.querySelector(".winner");
 let img = document.querySelector(".img");
+
+let liveSpan = document.querySelector(".lives");
+let lives = 5;
+/*array where letter guessed are pushed*/
+let pushAlphabet = [];
+
+let randomCategoryWord;
+let addClass;
+
+
+
 /*cateogories of words*/
 let wordCinema = ["STAR WARS", "BATMAN", "THE KING LION", "JUMANJI", "SPIDERMAN", "VENOM", "FROZEN", "HARRY POTTER"];
 let wordAnimal = ["CAT", "RABBIT", "LION", "ZEBRA", "HORSE", "TIGER", "BEAR", "FROG", "FROG", "MONKEY", "SNAKE"];
@@ -150,7 +161,21 @@ function createAlphabet() {
    }
 }
  
+/**
+ * Function that decrease lifes everytime the player guess the wrong letter
+ */
 
+ liveSpan.textContent = `You have 5 shots left`;
+
+ function decreaseLifes() {
+    lives--;
+    liveSpan.textContent = `You have ${lives} shots left`;
+    if (lives === 0) {
+       gameOver();
+    }
+ 
+ }
+ 
 /**
  * This function print the modal that say to the player once it loose
  */
