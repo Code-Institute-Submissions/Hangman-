@@ -8,7 +8,7 @@ let square = document.querySelector(".square");
 let winModal = document.querySelector(".winner");
 let img = document.querySelector(".img");
 let liveSpan = document.querySelector(".lives");
-console.log("HOla")
+
 let lives = 5;
 /*array where letter guessed are pushed*/
 let pushAlphabet = [];
@@ -126,8 +126,10 @@ function wordGuessed(randomCategoryWord) {
                if (randomCategoryWord[i] === alphabetValue) {
                   document.getElementById("main-div").childNodes[i].textContent = alphabetValue;
                   pushAlphabet.push("alphabetValue");
+                  
                   letterGuessed(randomCategoryWord, pushAlphabet);
                   letter.removeEventListener("click", e);
+
                }
             }
          } else {
@@ -149,9 +151,9 @@ function wordGuessed(randomCategoryWord) {
 
 
 function letterGuessed(randomCategoryWord, pushAlphabet) {
-   //console.log(randomCategoryWord.split(' ').join(''));
-   //console.log(pushAlphabet);
-   if (randomCategoryWord.length === pushAlphabet.length) {
+
+ 
+   if (randomCategoryWord.split(' ').join('').length === pushAlphabet.length) {
       winModal.classList.add("win-active");
 
    }
