@@ -13,9 +13,6 @@ let lives = 5;
 /*array where letter guessed are pushed*/
 let pushAlphabet = [];
 
-let randomCategoryWord;
-let addClass;
-
 /*cateogories of words*/
 let wordCinema = ["STAR WARS", "BATMAN", "THE KING LION", "JUMANJI", "SPIDERMAN", "VENOM", "FROZEN", "HARRY POTTER"];
 let wordAnimal = ["CAT", "RABBIT", "LION", "ZEBRA", "HORSE", "TIGER", "BEAR", "FROG", "FROG", "MONKEY", "SNAKE"];
@@ -62,6 +59,7 @@ function initGame() {
 
             addClass = "imgCinema";
 
+            
             randomCategoryWord = wordCinema[Math.floor(Math.random() * wordCinema.length)];
 
             console.log(randomCategoryWord);

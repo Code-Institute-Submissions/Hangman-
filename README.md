@@ -8,7 +8,7 @@ This game was made with JavaCript language. It required 90% of my attention; At 
 
 **The website is live on Github Pages [Linked Here](https://luquintas11.github.io/Hangman-/)**
 
-![Mockup Responsive]
+![Mockup Responsive](/assets/image/Hangman%20Mockup.png)
 
 ##Features
 
@@ -16,29 +16,31 @@ The website consists in one page and three different modals:
 ### The page with the game indeed
 * This section has a background color that contrasts with the rest of the website
 * In the background there is a image according with the choosen category
-   [screenshot]
+   ![Game Section](/assets/image/Swimming%20Readme.png)
 ### The initial modal
 * It explains the game and shows the three different categories
 * It has a background color that contrats with the paragraph and buttons on it
-[screenshot]
+![initial modal](/assets/image/Initial%20Modal.png)
 ### The modal that says to the player that wins
 * It pops up everytime the player wins
 * It has a button that restart the game
-[screenshote]
+![screenshote](/assets/image/WinnerModal.png)
 ### The modal that says to the player that looses
 * It pops up everytime the player loses
 * It has a button that restart the game
-[screenshot]
+![screenshot](/assets/image/ModalOver.png)
 
 ## Testing
 
 * This page works in different browser: Firefox, Chrome and Internet explore. 
 * This page has a proper responsive design that allows to run it in different screen sizes
 
+
+
 ## Bugs
 
 * When I was testing the website in the different browser I have the next problem with the size of the image:
-[screenshot]
+![Bug Image](/assets/image/BugImage.png)
 
 It was sorting out just ajusting the heigth of it
 
@@ -47,12 +49,12 @@ It was sorting out just ajusting the heigth of it
 * HTML: No errors were returned when passing through the official W3C validator. 
 * CSS:  No errorrs were returned when passing through the  official (jigsaw) validator. 
 * JavaScript: It was semicolons missing and I have a warning about functions.
-  [screenshot]
+  ![screenshot](/assets/image/JsHinBug.png)
 
  ## Lighthouse report
 
  * Lighthouse test, on mobile and deskot, does not show any problem
- {screenshot}
+ ![LighthouseTest](/assets/image/LigthhouseTest.png)
 
  ## Unfixed Bugs
 
@@ -62,7 +64,7 @@ It was sorting out just ajusting the heigth of it
 
 #### Media and content
 
-* The idea  about how to make a modal  was taken from https://www.w3schools.com/
+* The idea about how to make a modal  was taken from https://www.w3schools.com/
 * The images were taken from https://www.pexels.com/
 * The font-family was imported from https://fonts.google.com/
 * I want to give credits to my tutor Sandeep Aggarwal. 
