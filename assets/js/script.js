@@ -189,3 +189,17 @@ function gameOver() {
  
  }
 
+
+/**
+ * Function for restart buttons once the player wins or want to choose another category
+ */
+ let restartGamebuttons = document.getElementsByClassName("restart");
+ for (let buttons of restartGamebuttons) {
+    buttons.addEventListener("click", function () {
+       if (this.getAttribute("data-type") === "reset") {
+          window.location.reload();
+       } else if (this.getAttribute("data-type") === "win") {
+          window.location.reload();
+       }
+    });
+ }
