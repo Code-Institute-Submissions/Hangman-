@@ -128,19 +128,24 @@ function wordGuessed(randomCategoryWord) {
                   pushAlphabet.push("alphabetValue");
                   
                   letterGuessed(randomCategoryWord, pushAlphabet);
-                  letter.removeEventListener("click", e);
+                 
 
                }
             }
          } else {
-            letter.removeEventListener("click", e);
+            
             decreaseLifes();
          }
-
+         disable(letter)
       });
    }
 }
-
+/**
+ * Disable alphabet button after click it 
+ */
+function disable(letter){
+    letter.disabled = true
+}
 
 
 
