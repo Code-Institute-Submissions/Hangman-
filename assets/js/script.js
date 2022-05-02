@@ -1,5 +1,13 @@
 
+/*returns the elements within the document that matches the below classes*/
+let modalOver = document.querySelector(".modal-over");
+let modalClose = document.querySelector(".modal-close");
 
+let modalIn = document.querySelector(".modal-Initiator");
+let square = document.querySelector(".square");
+
+let winModal = document.querySelector(".winner");
+let img = document.querySelector(".img");
 /*cateogories of words*/
 let wordCinema = ["STAR WARS", "BATMAN", "THE KING LION", "JUMANJI", "SPIDERMAN", "VENOM", "FROZEN", "HARRY POTTER"];
 let wordAnimal = ["CAT", "RABBIT", "LION", "ZEBRA", "HORSE", "TIGER", "BEAR", "FROG", "FROG", "MONKEY", "SNAKE"];
@@ -7,6 +15,8 @@ let word = ["FOOTBALL", "BOXING", "CYCLING", "SWIMMING", "TENNIS", "CLIMBING", "
 
 
 let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ];
+
+
 // Wait for the DOM to finish loading before running the game
 document.addEventListener("DOMContentLoaded", function () {
    console.log("DOM is loaded");
@@ -79,8 +89,66 @@ function createAlphabet() {
     }
  }
 
+/**
+ *Function creates letter spaces and check if the letter guessed by the player is include in the random word
+ */
+
+ function wordGuessed(randomCategoryWord) {
+
+   for (let i = 0; i < randomCategoryWord.length; i++) {
+      let board = document.createElement('span');
+      board.className = "span";
+      document.getElementById('main-div').appendChild(board);
+      if (randomCategoryWord.includes(' ')) {
+         if (randomCategoryWord[i] == " ") {
+            board.textContent = "-";
+         } else {
+            board.textContent = "_";
+         }
 
 
+      } else {
+         board.textContent = "_";
+      }
+
+   }
+
+   for (let i = 0; i < alphabet.length; i++) {
+      let alpha = document.getElementsByClassName("alphabet")[i];
+      alpha.addEventListener("click", function e(event) {
+         let letter = event.target;
+         let alphabetValue = alphabet[i];
+         if (randomCategoryWord.includes(alphabetValue)) {
+            for (let i = 0; i < randomCategoryWord.length; i++) {
+               if (randomCategoryWord[i] === alphabetValue) {
+                  document.getElementById("main-div").childNodes[i].textContent = alphabetValue;
+                  pushAlphabet.push("alphabetValue");
+                  letterGuessed(randomCategoryWord, pushAlphabet);
+                  letter.removeEventListener("click", e);
+               }
+            }
+         } else {
+            letter.removeEventListener("click", e);
+            decreaseLifes();
+         }
+
+      });
+   }
+}
+
+/**
+ * Function that compares the length of the word guessed by the player with the random one to know once the word is complete
+ */
+
+
+ function letterGuessed(randomCategoryWord, pushAlphabet) {
+   console.log(randomCategoryWord.split(' ').join(''));
+   console.log(pushAlphabet);
+   if (randomCategoryWord.length === pushAlphabet.length) {
+      winModal.classList.add("win-active");
+
+   }
+}
  
 
 /**
