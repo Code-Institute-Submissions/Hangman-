@@ -24,7 +24,7 @@ let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
 
 // Wait for the DOM to finish loading before running the game
 document.addEventListener("DOMContentLoaded", function () {
-   console.log("DOM is lo=aded");
+   console.log("DOM is loaded");
    initGame();
 
 });
@@ -41,41 +41,43 @@ function initGame() {
 
    let buttons = document.getElementsByClassName("buttonCategory");
    for (let button of buttons) {
-      button.addEventListener("click", function () {
-         if (this.getAttribute("data-type") === "animals") {
+      button.addEventListener("click", onCategorySelection)
+   }
+}
+/**
+ * Function with the buttons for categories
+ */
 
-            addClass = "imgAnimal";
+function onCategorySelection(){
+   if (this.getAttribute("data-type") === "animals") {
 
-            randomCategoryWord = wordAnimal[Math.floor(Math.random() * wordAnimal.length)];
+      addClass = "imgAnimal";
 
-         } else if (this.getAttribute("data-type") === "sports") {
+      randomCategoryWord = wordAnimal[Math.floor(Math.random() * wordAnimal.length)];
 
-            randomCategoryWord = word[Math.floor(Math.random() * word.length)];
+   } else if (this.getAttribute("data-type") === "sports") {
 
-            addClass = "imgSport";
+      randomCategoryWord = word[Math.floor(Math.random() * word.length)];
 
-
-         } else if (this.getAttribute("data-type") === "cinema") {
-
-            addClass = "imgCinema";
-
-            
-            randomCategoryWord = wordCinema[Math.floor(Math.random() * wordCinema.length)];
-
-            console.log(randomCategoryWord);
-         }
+      addClass = "imgSport";
 
 
-         img.classList.add(addClass);
-         wordGuessed(randomCategoryWord);
-         square.classList.remove("squareInactive");
-         modalIn.classList.remove("modalInt");
-      });
+   } else if (this.getAttribute("data-type") === "cinema") {
 
+      addClass = "imgCinema";
+
+      
+      randomCategoryWord = wordCinema[Math.floor(Math.random() * wordCinema.length)];
+
+      console.log(randomCategoryWord);
    }
 
-}
 
+   img.classList.add(addClass);
+   wordGuessed(randomCategoryWord);
+   square.classList.remove("squareInactive");
+   modalIn.classList.remove("modalInt");
+}
 
 /*This function creates the alphabet buttons*/
 function createAlphabet() {
@@ -116,28 +118,33 @@ function wordGuessed(randomCategoryWord) {
 
    for (let i = 0; i < alphabet.length; i++) {
       let alpha = document.getElementsByClassName("alphabet")[i];
-      alpha.addEventListener("click", function e(event) {
+      alpha.addEventListener("click", function e(event){
          let letter = event.target;
-         let alphabetValue = alphabet[i];
-         if (randomCategoryWord.includes(alphabetValue)) {
-            for (let i = 0; i < randomCategoryWord.length; i++) {
-               if (randomCategoryWord[i] === alphabetValue) {
-                  document.getElementById("main-div").childNodes[i].textContent = alphabetValue;
-                  pushAlphabet.push("alphabetValue");
-                  
-                  letterGuessed(randomCategoryWord, pushAlphabet);
-                 
-
-               }
-            }
-         } else {
+   let alphabetValue = alphabet[i];
+   if (randomCategoryWord.includes(alphabetValue)) {
+      for (let i = 0; i < randomCategoryWord.length; i++) {
+         if (randomCategoryWord[i] === alphabetValue) {
+            document.getElementById("main-div").childNodes[i].textContent = alphabetValue;
+            pushAlphabet.push("alphabetValue");
             
-            decreaseLifes();
+            letterGuessed(randomCategoryWord, pushAlphabet);
+           
+
          }
-         disable(letter)
-      });
+      }
+   } else {
+      
+      decreaseLifes();
    }
+   disable(letter)
+
+});
 }
+
+   
+
+
+   
 /**
  * Disable alphabet button after click it 
  */
