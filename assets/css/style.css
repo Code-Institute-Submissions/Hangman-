@@ -165,6 +165,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    visibility: hidden;
 
 
 }
@@ -219,6 +220,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    visibility: hidden;
 
 }
 
@@ -254,7 +256,7 @@
     margin: 40px;
     width: 30%;
     height: 20%;
-    background-color: rgba(225, 14, 14, 0.5);
+    background-color: #4f52b88a ;
 }
 
 
