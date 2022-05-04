@@ -108,17 +108,14 @@ It was sorting out just ajusting the heigth of it
 
 * HTML: No errors were returned when passing through the official W3C validator. 
 * CSS:  No errorrs were returned when passing through the  official (jigsaw) validator. 
-* JavaScript: It was semicolons missing and I have a warning about functions.
-  ![screenshot](/assets/image/JsHinBug.png)
+* JavaScript: It was semicolons missing and I have the next warning in two functions. I was able to fix one of the function, divinding it in two smaller function. 
+  ![JsHint](/assets/image/JsHinBug.png)
 
  ## Lighthouse report
 
  * Lighthouse test, on mobile and deskot, does not show any problem
  ![LighthouseTest](/assets/image/LigthhouseTest.png)
 
- ## Unfixed Bugs
-
- * The warning in JsHint was not  sorted out
 
  ## Credits 
 
