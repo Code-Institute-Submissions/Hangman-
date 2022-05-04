@@ -175,7 +175,7 @@ function letterGuessed(randomCategoryWord, pushAlphabet) {
  * Function that decrease lifes everytime the player guess the wrong letter
  */
 
-liveSpan.textContent = `You have 5 shots left`;
+liveSpan.textContent = `You have 5 lives`;
 
 function decreaseLifes() {
    lives--;
