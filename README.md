@@ -13,19 +13,19 @@ This webpage is about the Hangman Game:is a word game in which one player has to
 
  * Test your knowledge in general culture 
 
-# **User experience**
+## User experience
  
-## Target Audience
+### Target Audience
 
 *  Adults and children; anyone who likes  quick word games.
 
-## This website will provide
+### This website will provide
 
 * A simple way to navigate for all users 
 * An easy way to understand and play
 * Good presentation and a visually appealing design regardless of screen size
 
-## User Stories
+###  User Stories
 
 * As a new user I expect to be able to navigate the site.
 * As a user, I want to be able to pick a category for the game.
@@ -33,28 +33,28 @@ This webpage is about the Hangman Game:is a word game in which one player has to
 * As a user, I want to know what the correct phrase was in case I don't guess it correctly
 * As a user, I want to be able to know what letter I already clicked
 
-# **Design**
+## Design
 
-## Colour
+### Colour
 
 * The color palette was chosen to give it good contrast and fun moody
 
-## Font
+### Font
 
 * The site  uses the "Raleway" font for easyness to read and it has a fallback of "sans-serif"
 
-## Imagery
+### Imagery
 
 * The images used were picked according to the different categories
 
-# **Technologies Used**
+## Technologies Used
 
-## Languages
+### Languages
 * HTML
 * CSS
 * JavaScript
 
-## Frameworks & Tools
+### Frameworks & Tools
 
 * GitHub
 * GitPod

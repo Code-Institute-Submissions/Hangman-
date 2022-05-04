@@ -140,7 +140,7 @@ function wordGuessed(randomCategoryWord) {
 
 });
 }
-
+}
    
 
 
