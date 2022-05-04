@@ -184,6 +184,8 @@ function decreaseLifes() {
  */
  function gameOver() {
    modalOver.classList.add("bg-active");
+   let spanOver = document.getElementById("gameOver");
+   spanOver.textContent = `The correct word is ${randomCategoryWord}`
 
    modalClose.addEventListener("click", function () {
       modalOver.classList.remove("bg-active");
